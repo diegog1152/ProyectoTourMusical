@@ -8,8 +8,8 @@ class Usuario:
         self.correo = correo
         self.historial_eventos = historial_eventos
 
-    def guardar_en_json(self):
-        usuario_data = {
+    def to_json(self):
+        return {
             "id_usuario": self.id_usuario,
             "nombre_usuario": self.nombre_usuario,
             "contrasena": self.contrasena,
@@ -17,54 +17,30 @@ class Usuario:
             "historial_eventos": self.historial_eventos
         }
 
-        # Abrir el archivo JSON y guardar los datos del usuario
-        with open("usuarios.json", "a") as archivo_json:
-            json.dump(usuario_data, archivo_json)
-            archivo_json.write('\n')
+    @classmethod
+    def from_json(cls, data):
+        return cls(
+            data["id_usuario"],
+            data["nombre_usuario"],
+            data["contrasena"],
+            data["correo"],
+            data["historial_eventos"]
+        )
 
     @staticmethod
     def cargar_usuarios_desde_json():
         usuarios = []
         try:
             with open("usuarios.json", "r") as archivo_json:
-                for linea in archivo_json:
-                    usuario_data = json.loads(linea)
-                    usuario = Usuario(
-                        usuario_data["id_usuario"],
-                        usuario_data["nombre_usuario"],
-                        usuario_data["contrasena"],
-                        usuario_data["correo"],
-                        usuario_data["historial_eventos"]
-                    )
+                usuarios_data = json.load(archivo_json)
+                for usuario_data in usuarios_data:
+                    usuario = Usuario.from_json(usuario_data)
                     usuarios.append(usuario)
         except FileNotFoundError:
-            # Si el archivo no existe, retorna una lista vacía
             return []
         return usuarios
 
-def registrar_usuario():
-    usuarios = Usuario.cargar_usuarios_desde_json()
-
-    siguiente_id_usuario = len(usuarios) + 1
-    nombre_usuario = input("Nombre de usuario: ")
-    contrasena = input("Contraseña: ")
-    correo = input("Correo: ")
-
-    usuario = Usuario(siguiente_id_usuario, nombre_usuario, contrasena, correo, [])
-    usuario.guardar_en_json()
-
-    print("Usuario registrado exitosamente. ID de usuario:", siguiente_id_usuario)
-
-def autenticar_usuario():
-    usuarios = Usuario.cargar_usuarios_desde_json()
-
-    nombre_usuario = input("Nombre de usuario: ")
-    contrasena = input("Contraseña: ")
-
-    for usuario in usuarios:
-        if usuario.nombre_usuario == nombre_usuario and usuario.contrasena == contrasena:
-            print("Inicio de sesión exitoso.")
-            return usuario
-
-    print("Nombre de usuario o contraseña incorrectos.")
-    return None
+    def guardar_en_json(self):
+        with open("usuarios.json", "a") as archivo_json:
+            json.dump(self.to_json(), archivo_json)
+            archivo_json.write('\n')

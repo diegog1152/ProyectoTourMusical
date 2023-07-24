@@ -6,3 +6,18 @@ class Review:
         self.calificacion = calificacion
         self.comentario = comentario
         self.animo = animo
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "id_evento": self.id_evento,
+            "id_usuario": self.id_usuario,
+            "calificacion": self.calificacion,
+            "comentario": self.comentario,
+            "animo": self.animo
+        }
+
+    @classmethod
+    def from_json(cls, data):
+        return cls(data["id"], data["id_evento"], data["id_usuario"], data["calificacion"],
+                   data["comentario"], data["animo"])
