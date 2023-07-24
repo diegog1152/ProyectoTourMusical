@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from usuarios import Usuario, cargar_usuarios_desde_json
+from entidades.usuarios import Usuario, cargar_usuarios_desde_json
 
 def mostrar_pantalla_inicio():
     ventana_inicio = tk.Tk()
