@@ -1,3 +1,4 @@
+import json
 import tkinter as tk
 from tkinter import messagebox
 from entidades.usuarios import Usuario, cargar_usuarios_desde_json
