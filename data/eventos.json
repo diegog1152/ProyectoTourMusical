@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nombre": "Concierto de Rock",
+        "artista": "Rock Band",
+        "genero": "Rock",
+        "id_ubicacion": 1,
+        "hora_inicio": "2023-07-23 18:00",
+        "descripcion": "Un increíble concierto de rock en vivo.",
+        "imagen": "concierto_rock.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Festival de Jazz",
+        "artista": "Jazz Ensemble",
+        "genero": "Jazz",
+        "id_ubicacion": 2,
+        "hora_inicio": "2023-07-24 19:30",
+        "descripcion": "Un festival de jazz con artistas destacados.",
+        "imagen": "festival_jazz.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "The ICE is back",
+        "artista": "Vanilla ICE",
+        "genero": "Rap",
+        "id_ubicacion": 3,
+        "hora_inicio": "2023-10-25 22:00",
+        "descripcion": "Lo mejor del rap de los 90",
+        "imagen": "vanillaice.jpg"
+    }
+]
