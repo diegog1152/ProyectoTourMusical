@@ -11,13 +11,13 @@
     },
     {
         "id": 2,
-        "nombre": "Festival de Jazz",
-        "artista": "Jazz Ensemble",
-        "genero": "Jazz",
+        "nombre": "AMERI",
+        "artista": "Duki",
+        "genero": "TRap",
         "id_ubicacion": 2,
-        "hora_inicio": "2023-07-24 19:30",
-        "descripcion": "Un festival de jazz con artistas destacados.",
-        "imagen": "festival_jazz.jpg"
+        "hora_inicio": "2023-10-25 22:00",
+        "descripcion": "Primera presentacion de AMERI",
+        "imagen": "views.duki.jpg"
     },
     {
         "id": 3,
@@ -27,6 +27,6 @@
         "id_ubicacion": 3,
         "hora_inicio": "2023-10-25 22:00",
         "descripcion": "Lo mejor del rap de los 90",
-        "imagen": "vanillaice.jpg"
+        "imagen": "views.vanillaice.jpg"
     }
 ]
