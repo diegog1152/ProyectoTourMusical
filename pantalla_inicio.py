@@ -1,7 +1,7 @@
 import json
 import tkinter as tk
 from tkinter import messagebox
-from entidades.usuarios import Usuario
+from ProyectoTourMusical.entidades.usuarios import Usuario, cargar_usuarios_desde_json
 
 def mostrar_pantalla_inicio():
     ventana_inicio = tk.Tk()
@@ -9,7 +9,7 @@ def mostrar_pantalla_inicio():
     ventana_inicio.geometry("400x300")
 
     def iniciar_sesion():
-        usuarios = Usuario.cargar_usuarios_desde_json()
+        usuarios = cargar_usuarios_desde_json()
 
         nombre_usuario = entry_nombre_usuario.get()
         contrasena = entry_contrasena.get()
@@ -23,7 +23,7 @@ def mostrar_pantalla_inicio():
         messagebox.showerror("Error de Inicio de Sesión", "Nombre de usuario o contraseña incorrectos.")
 
     def registrarse():
-        usuarios = Usuario.cargar_usuarios_desde_json()
+        usuarios = cargar_usuarios_desde_json()
 
         siguiente_id_usuario = len(usuarios) + 1
         nombre_usuario = entry_nombre_usuario.get()
@@ -33,7 +33,7 @@ def mostrar_pantalla_inicio():
         nuevo_usuario = Usuario(siguiente_id_usuario, nombre_usuario, contrasena, correo, [])
         usuarios.append(nuevo_usuario)
 
-        with open("data/usuarios.json", "w") as archivo_json:
+        with open("ProyectoTourMusical/data/usuarios.json", "w") as archivo_json:
             usuarios_data = [usuario.to_json() for usuario in usuarios]
             json.dump(usuarios_data, archivo_json)
 
