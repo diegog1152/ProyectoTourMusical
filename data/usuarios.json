@@ -1,16 +1,16 @@
 [
     {
       "id": 1,
-      "nombre_usuario": "usuario1",
-      "contrasena": "contraseña1",
-      "correo": "usuario1@example.com",
+      "nombre_usuario": "dgiuliani",
+      "contrasena": "123",
+      "correo": "dgiuliani@gmail.com",
       "historial_eventos": []
     },
     {
       "id": 2,
-      "nombre_usuario": "usuario2",
-      "contrasena": "contraseña2",
-      "correo": "usuario2@example.com",
+      "nombre_usuario": "ddd",
+      "contrasena": "123",
+      "correo": "ddd@gmail.com",
       "historial_eventos": []
     }
   ]

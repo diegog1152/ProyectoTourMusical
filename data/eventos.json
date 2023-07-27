@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "nombre": "Concierto de Rock",
-        "artista": "Rock Band",
-        "genero": "Rock",
+        "nombre": "",
+        "artista": "Nicki Nicole",
+        "genero": "Urbano Latino",
         "id_ubicacion": 1,
-        "hora_inicio": "2023-07-23 18:00",
+        "hora_inicio": "2023-12-23 18:00",
         "descripcion": "Un increíble concierto de rock en vivo.",
-        "imagen": "concierto_rock.jpg"
+        "imagen": "views.nickinicoleALMA.jpg"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "artista": "Duki",
         "genero": "TRap",
         "id_ubicacion": 2,
-        "hora_inicio": "2023-10-25 22:00",
+        "hora_inicio": "2023-11-15 20:00",
         "descripcion": "Primera presentacion de AMERI",
         "imagen": "views.duki.jpg"
     },
