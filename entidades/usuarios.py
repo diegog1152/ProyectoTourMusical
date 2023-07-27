@@ -31,7 +31,7 @@ class Usuario:
     def cargar_usuarios_desde_json():
         usuarios = []
         try:
-            with open("usuarios.json", "r") as archivo_json:
+            with open("data/usuarios.json", "r") as archivo_json:
                 usuarios_data = json.load(archivo_json)
                 for usuario_data in usuarios_data:
                     usuario = Usuario.from_json(usuario_data)
@@ -41,6 +41,6 @@ class Usuario:
         return usuarios
 
     def guardar_en_json(self):
-        with open("usuarios.json", "a") as archivo_json:
+        with open("data/usuarios.json", "a") as archivo_json:
             json.dump(self.to_json(), archivo_json)
             archivo_json.write('\n')
