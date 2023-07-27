@@ -1,8 +1,8 @@
 import json
 
 class Usuario:
-    def __init__(self, id_usuario, nombre_usuario, contrasena, correo, historial_eventos=None):
-        self.id_usuario = id_usuario
+    def __init__(self, id, nombre_usuario, contrasena, correo, historial_eventos=None):
+        self.id = id
         self.nombre_usuario = nombre_usuario
         self.contrasena = contrasena
         self.correo = correo
@@ -10,17 +10,13 @@ class Usuario:
 
     def guardar_en_json(self, archivo_json):
         try:
-            # Leer contenido actual del archivo si existe
             with open(archivo_json, "r") as archivo:
                 usuarios = json.load(archivo)
         except (FileNotFoundError, json.JSONDecodeError):
-            # Si el archivo no existe o está vacío, inicializar la lista de usuarios
             usuarios = []
 
-        # Agregar el nuevo usuario a la lista
         usuarios.append(self.to_json())
 
-        # Escribir la lista de usuarios nuevamente en el archivo
         with open(archivo_json, "w") as archivo:
             json.dump(usuarios, archivo)
 
@@ -32,7 +28,7 @@ class Usuario:
                 data["nombre_usuario"],
                 data["contrasena"],
                 data["correo"],
-                data["historial_eventos"]
+                data.get("historial_eventos", [])  # Use data.get() to handle missing key
             )
         except KeyError as e:
             raise ValueError(f"El objeto JSON no tiene la clave requerida: {e}")
