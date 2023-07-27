@@ -1,7 +1,7 @@
 import json
 import tkinter as tk
 from tkinter import messagebox
-from ProyectoTourMusical.entidades.usuarios import Usuario, cargar_usuarios_desde_json
+from entidades.usuarios import Usuario, cargar_usuarios_desde_json
 
 def mostrar_pantalla_inicio():
     ventana_inicio = tk.Tk()
@@ -33,7 +33,7 @@ def mostrar_pantalla_inicio():
         nuevo_usuario = Usuario(siguiente_id_usuario, nombre_usuario, contrasena, correo, [])
         usuarios.append(nuevo_usuario)
 
-        with open("ProyectoTourMusical/data/usuarios.json", "w") as archivo_json:
+        with open("data/usuarios.json", "w") as archivo_json:
             usuarios_data = [usuario.to_json() for usuario in usuarios]
             json.dump(usuarios_data, archivo_json)
 
@@ -69,3 +69,4 @@ def mostrar_pantalla_inicio():
     ventana_inicio.mainloop()
 
 mostrar_pantalla_inicio()
+
