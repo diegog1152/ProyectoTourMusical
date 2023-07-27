@@ -31,8 +31,6 @@ def mostrar_pantalla_inicio():
         correo = entry_correo.get()
 
         nuevo_usuario = Usuario(siguiente_id_usuario, nombre_usuario, contrasena, correo, [])
-        usuarios.append(nuevo_usuario)
-
         nuevo_usuario.guardar_en_json("data/usuarios.json")
 
         messagebox.showinfo("Registro", "Usuario registrado exitosamente.")
@@ -67,5 +65,3 @@ def mostrar_pantalla_inicio():
     ventana_inicio.mainloop()
 
 mostrar_pantalla_inicio()
-
-

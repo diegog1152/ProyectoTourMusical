@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "id_usuario": 1,
+        "nombre_usuario": "ddd",
+        "contrasena": "ddd",
+        "correo": "ddd@gmail.com",
+        "historial_eventos": []
+    },
+    {
+        "id_usuario": 2,
+        "nombre_usuario": "nombre2",
+        "contrasena": "contrasena2",
+        "correo": "correo2@example.com",
+        "historial_eventos": []
+    }
+
+]

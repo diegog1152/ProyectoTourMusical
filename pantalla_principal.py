@@ -3,7 +3,7 @@ from entidades.evento import cargar_eventos_desde_json
 from entidades.ubicacion import cargar_ubicaciones_desde_json
 from entidades.review import cargar_reviews_desde_json
 from PIL import Image, ImageTk
-from tkintermapview import MapView
+from tkintermapview import TkinterMapView
 
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
