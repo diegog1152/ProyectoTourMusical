@@ -28,10 +28,10 @@ class Usuario:
         )
 
     @staticmethod
-    def cargar_usuarios_desde_json():
+    def cargar_desde_json(fuente_datos):
         usuarios = []
         try:
-            with open("data/usuarios.json", "r") as archivo_json:
+            with open(fuente_datos, "r") as archivo_json:
                 usuarios_data = json.load(archivo_json)
                 for usuario_data in usuarios_data:
                     usuario = Usuario.from_json(usuario_data)
@@ -40,7 +40,8 @@ class Usuario:
             return []
         return usuarios
 
-    def guardar_en_json(self):
-        with open("data/usuarios.json", "a") as archivo_json:
+    def guardar_en_json(self, fuente_datos):
+        with open(fuente_datos, "a") as archivo_json:
             json.dump(self.to_json(), archivo_json)
             archivo_json.write('\n')
+

@@ -1,8 +1,7 @@
 import json
 import tkinter as tk
 from tkinter import messagebox
-from entidades.usuarios import Usuario, cargar_usuarios_desde_json
-from pantalla_principal import mostrar_pantalla_principal
+from entidades.usuarios import Usuario
 
 def mostrar_pantalla_inicio():
     ventana_inicio = tk.Tk()
@@ -10,7 +9,7 @@ def mostrar_pantalla_inicio():
     ventana_inicio.geometry("400x300")
 
     def iniciar_sesion():
-        usuarios = cargar_usuarios_desde_json()
+        usuarios = Usuario.cargar_desde_json("data/usuarios.json")
 
         nombre_usuario = entry_nombre_usuario.get()
         contrasena = entry_contrasena.get()
@@ -19,16 +18,12 @@ def mostrar_pantalla_inicio():
             if usuario.nombre_usuario == nombre_usuario and usuario.contrasena == contrasena:
                 messagebox.showinfo("Inicio de Sesión", f"Bienvenido, {usuario.nombre_usuario}!")
                 ventana_inicio.destroy()
-
-                # Mostrar la pantalla principal después del inicio de sesión exitoso
-                mostrar_pantalla_principal()
-                
                 return
 
         messagebox.showerror("Error de Inicio de Sesión", "Nombre de usuario o contraseña incorrectos.")
 
     def registrarse():
-        usuarios = cargar_usuarios_desde_json()
+        usuarios = Usuario.cargar_desde_json("data/usuarios.json")
 
         siguiente_id_usuario = len(usuarios) + 1
         nombre_usuario = entry_nombre_usuario.get()
@@ -38,9 +33,7 @@ def mostrar_pantalla_inicio():
         nuevo_usuario = Usuario(siguiente_id_usuario, nombre_usuario, contrasena, correo, [])
         usuarios.append(nuevo_usuario)
 
-        with open("ProyectoTourMusical/data/usuarios.json", "w") as archivo_json:
-            usuarios_data = [usuario.to_json() for usuario in usuarios]
-            json.dump(usuarios_data, archivo_json)
+        nuevo_usuario.guardar_en_json("data/usuarios.json")
 
         messagebox.showinfo("Registro", "Usuario registrado exitosamente.")
 
@@ -74,4 +67,5 @@ def mostrar_pantalla_inicio():
     ventana_inicio.mainloop()
 
 mostrar_pantalla_inicio()
+
 
