@@ -1,7 +1,8 @@
 import tkinter as tk
+import json
 from entidades.evento import cargar_eventos_desde_json
 from entidades.ubicacion import cargar_ubicaciones_desde_json
-from entidades.review import cargar_reviews_desde_json
+from entidades.review import cargar_reviews_desde_json, guardar_review
 from PIL import Image, ImageTk
 from tkintermapview import TkinterMapView
 
@@ -15,6 +16,32 @@ def mostrar_pantalla_principal():
         ventana_eventos.title("Eventos Disponibles")
         ventana_eventos.geometry("400x500")
         eventos = cargar_eventos_desde_json()
+
+        def mostrar_escribir_review(evento):
+            ventana_review = tk.Toplevel()
+            ventana_review.title("Escribir Review")
+            ventana_review.geometry("300x200")
+
+            label_evento = tk.Label(ventana_review, text=f"Evento: {evento.nombre}", font=("Arial", 12, "bold"))
+            label_evento.pack()
+
+            label_calificacion = tk.Label(ventana_review, text="Calificación:")
+            label_calificacion.pack()
+            entry_calificacion = tk.Entry(ventana_review)
+            entry_calificacion.pack()
+
+            label_comentario = tk.Label(ventana_review, text="Comentario:")
+            label_comentario.pack()
+            entry_comentario = tk.Entry(ventana_review)
+            entry_comentario.pack()
+
+            label_animo = tk.Label(ventana_review, text="Ánimo:")
+            label_animo.pack()
+            entry_animo = tk.Entry(ventana_review)
+            entry_animo.pack()
+
+            btn_guardar = tk.Button(ventana_review, text="Guardar Review", command=lambda: guardar_nueva_review(evento, entry_calificacion.get(), entry_comentario.get(), entry_animo.get()))
+            btn_guardar.pack()
 
         for evento in eventos:
             imagen = Image.open(evento.imagen)
@@ -33,6 +60,9 @@ def mostrar_pantalla_principal():
 
             btn_ver_mas = tk.Button(ventana_eventos, text="Ver más", command=lambda e=evento: mostrar_info_evento(e))
             btn_ver_mas.pack()
+
+            btn_escribir_review = tk.Button(ventana_eventos, text="Escribir Review", command=lambda e=evento: mostrar_escribir_review(e))
+            btn_escribir_review.pack()
 
     def mostrar_info_evento(evento):
         ventana_info_evento = tk.Toplevel()
@@ -67,7 +97,7 @@ def mostrar_pantalla_principal():
         eventos = cargar_eventos_desde_json()
         ubicaciones = cargar_ubicaciones_desde_json()
 
-        map_view = MapView(ventana_mapa, zoom=12)
+        map_view = TkinterMapView(ventana_mapa, zoom=12)
         map_view.pack(fill=tk.BOTH, expand=True)
 
         for ubicacion in ubicaciones:
@@ -95,6 +125,12 @@ def mostrar_pantalla_principal():
             label_animo = tk.Label(ventana_reviews, text=f"Ánimo: {review.animo}")
             label_animo.pack()
 
+    def guardar_nueva_review(evento, calificacion, comentario, animo):
+        nueva_review = Review(evento.id, calificacion, comentario, animo)
+        guardar_review(nueva_review)
+        # Opcional: Recargar la sección de reviews para mostrar la nueva review inmediatamente
+        mostrar_reviews()
+
     btn_eventos = tk.Button(ventana_principal, text="Eventos", command=mostrar_eventos)
     btn_eventos.pack()
 
@@ -107,3 +143,4 @@ def mostrar_pantalla_principal():
     ventana_principal.mainloop()
 
 mostrar_pantalla_principal()
+
