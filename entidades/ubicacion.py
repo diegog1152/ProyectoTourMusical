@@ -1,3 +1,8 @@
+class Coordenadas:
+    def __init__(self, latitud, longitud):
+        self.latitud = latitud
+        self.longitud = longitud
+
 class Ubicacion:
     def __init__(self, id, nombre, direccion, coordenadas):
         self.id = id
@@ -10,9 +15,14 @@ class Ubicacion:
             "id": self.id,
             "nombre": self.nombre,
             "direccion": self.direccion,
-            "coordenadas": self.coordenadas
+            "coordenadas": {
+                "latitud": self.coordenadas.latitud,
+                "longitud": self.coordenadas.longitud
+            }
         }
 
     @classmethod
     def from_json(cls, data):
-        return cls(data["id"], data["nombre"], data["direccion"], data["coordenadas"])
+        coordenadas_data = data["coordenadas"]
+        coordenadas = Coordenadas(coordenadas_data["latitud"], coordenadas_data["longitud"])
+        return cls(data["id"], data["nombre"], data["direccion"], coordenadas)

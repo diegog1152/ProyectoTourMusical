@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Estadio Monumental",
+        "direccion": "",
+        "coordenadas": {
+            "latitud": 123,
+            "longitud": 123
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Movistar Arena",
+        "direccion": "",
+        "coordenadas": {
+            "latitud": 123,
+            "longitud": 123
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Luna Park",
+        "direccion": "",
+        "coordenadas": {
+            "latitud": 123,
+            "longitud": 123
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Estadio Velez Sarfield",
+        "direccion": "",
+        "coordenadas": {
+            "latitud": 123,
+            "longitud": 123
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Estadio Unico",
+        "direccion": "",
+        "coordenadas": {
+            "latitud": 123,
+            "longitud": 123
+        }
+    }
+]

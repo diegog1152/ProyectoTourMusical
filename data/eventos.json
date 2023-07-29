@@ -1,19 +1,19 @@
 [
     {
         "id": 1,
-        "nombre": "",
+        "nombre": "ALMA",
         "artista": "Nicki Nicole",
         "genero": "Urbano Latino",
         "id_ubicacion": 1,
         "hora_inicio": "2023-12-23 18:00",
-        "descripcion": "Un increíble concierto de rock en vivo.",
+        "descripcion": "Presentacion de su ultimo album",
         "imagen": "views.nickinicoleALMA.jpg"
     },
     {
         "id": 2,
         "nombre": "AMERI",
         "artista": "Duki",
-        "genero": "TRap",
+        "genero": "Trap",
         "id_ubicacion": 2,
         "hora_inicio": "2023-11-15 20:00",
         "descripcion": "Primera presentacion de AMERI",
@@ -28,5 +28,25 @@
         "hora_inicio": "2023-10-25 22:00",
         "descripcion": "Lo mejor del rap de los 90",
         "imagen": "views.vanillaice.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Fierro Pariente",
+        "artista": "Peso Pluma",
+        "genero": "Regional Mexicana",
+        "id_ubicacion": 4,
+        "hora_inicio": "2023-09-10 19:30",
+        "descripcion": "Primer show de Peso Pluma en Argentina",
+        "imagen": "views.pesopluma.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "La Nena de Argentina",
+        "artista": "Maria Becerra",
+        "genero": "Urbano Latino",
+        "id_ubicacion": 5,
+        "hora_inicio": "2023-08-05 21:00",
+        "descripcion": "Los mejores exitos de Maria Becerra",
+        "imagen": "views.mariabecerra.jpg"
     }
 ]
