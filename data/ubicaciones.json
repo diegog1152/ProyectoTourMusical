@@ -1,47 +1,47 @@
 [
     {
         "id": 1,
-        "nombre": "Estadio Monumental",
+        "nombre": "Show Nicki Nicole - Estadio Monumental",
         "direccion": "",
         "coordenadas": {
-            "latitud": 123,
-            "longitud": 123
+            "latitud": -34.5456,
+            "longitud": -58.4492
         }
     },
     {
         "id": 2,
-        "nombre": "Movistar Arena",
+        "nombre": "Show Duki - Movistar Arena",
         "direccion": "",
         "coordenadas": {
-            "latitud": 123,
-            "longitud": 123
+            "latitud": -34.5774,
+            "longitud": -58.4086
         }
     },
     {
         "id": 3,
-        "nombre": "Luna Park",
+        "nombre": "Show Vanilla Ice - Luna Park",
         "direccion": "",
         "coordenadas": {
-            "latitud": 123,
-            "longitud": 123
+            "latitud": -34.6037,
+            "longitud": -58.3816
         }
     },
     {
         "id": 4,
-        "nombre": "Estadio Velez Sarfield",
+        "nombre": "Show Peso Pluma - Estadio Velez Sarfield",
         "direccion": "",
         "coordenadas": {
-            "latitud": 123,
-            "longitud": 123
+            "latitud": -34.6182,
+            "longitud": -58.3716
         }
     },
     {
         "id": 5,
-        "nombre": "Estadio Unico",
+        "nombre": "Show Maria Becerra - Estadio Unico",
         "direccion": "",
         "coordenadas": {
-            "latitud": 123,
-            "longitud": 123
+            "latitud": -34.5731,
+            "longitud": -58.4171
         }
     }
 ]
