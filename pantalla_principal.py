@@ -1,10 +1,10 @@
 import tkinter as tk
 import json
-from entidades.evento import cargar_eventos_desde_json
-from entidades.ubicacion import cargar_ubicaciones_desde_json
-from entidades.review import cargar_reviews_desde_json, guardar_review
+from entidades.evento import Evento
+from entidades.ubicacion import Ubicacion
+from entidades.review import Review
 from PIL import Image, ImageTk
-from tkintermapview import TkinterMapView
+import TkinterMapView
 
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()

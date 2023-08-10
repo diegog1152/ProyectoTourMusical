@@ -9,7 +9,7 @@ class Review:
 
 def cargar_reviews_desde_json():
     try:
-        with open("reviews.json", "r") as file:
+        with open("data/reviews.json", "r") as file:
             data = json.load(file)
             reviews = []
             for review_data in data:
@@ -26,7 +26,7 @@ def cargar_reviews_desde_json():
 
 def guardar_review(review):
     try:
-        with open("reviews.json", "r") as file:
+        with open("data/reviews.json", "r") as file:
             data = json.load(file)
     except FileNotFoundError:
         data = []
@@ -38,5 +38,5 @@ def guardar_review(review):
         "animo": review.animo
     })
 
-    with open("reviews.json", "w") as file:
+    with open("data/reviews.json", "w") as file:
         json.dump(data, file)
