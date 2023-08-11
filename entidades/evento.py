@@ -1,3 +1,5 @@
+import json
+
 class Evento:
     def __init__(self, id, nombre, artista, genero, id_ubicacion, hora_inicio, descripcion, imagen):
         self.id = id
@@ -28,4 +30,16 @@ class Evento:
     def from_json(cls, data):
         return cls(data["id"], data["nombre"], data["artista"], data["genero"], data["id_ubicacion"],
                    data["hora_inicio"], data["descripcion"], data["imagen"])
+
+    @classmethod
+    def cargar_eventos_desde_json(cls):
+        ruta_archivo = "data/eventos.json"  # Ruta relativa al archivo desde evento.py
+        eventos = []
+        with open(ruta_archivo, "r") as archivo:
+            data = json.load(archivo)
+            for evento_data in data:
+                evento = cls.from_json(evento_data)
+                eventos.append(evento)
+        return eventos
+
 

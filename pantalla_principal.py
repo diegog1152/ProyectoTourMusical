@@ -4,7 +4,7 @@ from entidades.evento import Evento
 from entidades.ubicacion import Ubicacion
 from entidades.review import Review
 from PIL import Image, ImageTk
-import TkinterMapView
+import tkintermapview
 
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
