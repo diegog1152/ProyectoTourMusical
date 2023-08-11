@@ -6,6 +6,26 @@ from entidades.review import Review
 from PIL import Image, ImageTk
 import tkintermapview
 
+def cargar_eventos_desde_json():
+    ruta_archivo = "data/eventos.json"  # Ruta relativa al archivo desde pantalla_principal.py
+    eventos = []
+    with open(ruta_archivo, "r") as archivo:
+        data = json.load(archivo)
+        for evento_data in data:
+            evento = Evento.from_json(evento_data)
+            eventos.append(evento)
+    return eventos
+
+def cargar_ubicaciones_desde_json():
+    ruta_archivo = "data/ubicaciones.json"  # Ruta relativa al archivo desde pantalla_principal.py
+    ubicaciones = []
+    with open(ruta_archivo, "r") as archivo:
+        data = json.load(archivo)
+        for ubicacion_data in data:
+            ubicacion = Ubicacion.from_json(ubicacion_data)
+            ubicaciones.append(ubicacion)
+    return ubicaciones
+
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
     ventana_principal.title("Tour Musical")

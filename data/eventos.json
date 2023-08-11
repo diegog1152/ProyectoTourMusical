@@ -7,7 +7,7 @@
         "id_ubicacion": 1,
         "hora_inicio": "2023-12-23 18:00",
         "descripcion": "Presentacion de su ultimo album",
-        "imagen": "views.nickinicoleALMA.jpg"
+        "imagen": "imagen3.jpg"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "id_ubicacion": 2,
         "hora_inicio": "2023-11-15 20:00",
         "descripcion": "Primera presentacion de AMERI",
-        "imagen": "views.duki.jpg"
+        "imagen": "imagen1.jpg"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "id_ubicacion": 3,
         "hora_inicio": "2023-10-25 22:00",
         "descripcion": "Lo mejor del rap de los 90",
-        "imagen": "views.vanillaice.jpg"
+        "imagen": "imagen5.jpg"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "id_ubicacion": 4,
         "hora_inicio": "2023-09-10 19:30",
         "descripcion": "Primer show de Peso Pluma en Argentina",
-        "imagen": "views.pesopluma.jpg"
+        "imagen": "imagen4.jpg"
     },
     {
         "id": 5,
@@ -47,6 +47,6 @@
         "id_ubicacion": 5,
         "hora_inicio": "2023-08-05 21:00",
         "descripcion": "Los mejores exitos de Maria Becerra",
-        "imagen": "views.mariabecerra.jpg"
+        "imagen": "imagen2.jpg"
     }
 ]
