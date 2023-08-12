@@ -1,16 +1,32 @@
-ESTE ES MI PROYECTO FINAL, DIEGO GIULIANI 43687264.
-PARA EJECUTAR EL PROGRAMA SE DEBERA INICIAR PANTALLA INICIO QUE SE ENCUENTRA EN entidades, A PARTIR DEL MISMO LUEGO DE INICIAR SESION CON ALGUNOS DE LOS USUARIOS PRECARGADOS, LO LLEVARA A LA PANTALLA PRINCIPAL.
-EN PANTALLA PRINCIPAL SE PODRAN VER 3 BOTONES LOS CUALES SON EVENTOS,MAPA Y REVIEWS, EN EVENTOS MUESTRA UNA LISTA CON LOS EVENTOS Y SUS CORRESPONDIENTES CARACTERISTICAS ASI COMO TAMBIEN SE PUEDE DEJAR UNA REVIEW AL MISMO.
-EN MAPA SE VISUALIZA UNA ZONA POR MEDIO DE UN MAPA EL CUAL MUESTRA LAS UBICACIONES CORRESPONDIENTES A LOS EVENTOS EN CUESTION.
-Y EN REVIEWS BASICAMENTE SE GUARDARIAN LAS REVIEWS CORRESPONDIENTES A LOS EVENTOS
-EL TEMA DEL MAPA MIL DISCULPAS, PERO NO LO PUDE SOLUCIONAR, POR ALGUNA RAZON NO ME LO CARGA, DESDE DONDE YO VEO ESTA BIEN EN CUANTO AL CODIGO PERO COMO QUE NO ME TOMARIA LAS LIBRERIAS DEL MISMO, COMO SI NO EXISTIESE, POR ESO NO LO COMPRENDO EL PORQUE, ES UNA DE LAS COSAS CONTRA LAS QUE MAS LUCHE EN EL DESARROLLO DE ESTE PROGRAMA.
-ERRORES DEL PROGRAMA EN CUESTION: EL MAPA NO APARECE POR ALGUNA RAZON, DIRECTAMENTE NO LO TOMA, Y AL INICIAR EL PROGRAMA DESDE PANTALLA_INICIO SE ABRE PANTALLA_PRINCIPAL, DEBIDO ESTO PARA UN BUEN USO DEL PROGRAMA SE CERRARIA LA VENTANA DE PANTALLA_PRINCIPAL QUE SE ABRE AL INICIO Y DE AHI DIRIGIRA PARA INICIAR SESION Y CONTINUAR CON EL USO NORMAL DEL PROGRAMA.
-CON ESO DOY CONCLUIDO LA EXPLICACION DE DICHO PROGRAMA PARTE DEL PROYECTO FINAL 1000PROGRAMADORES.
-USUARIOS CARGADOS PARA USAR:
-NOMBRE DE USUARIO: dgiuliani
-CONTRASE;A:123
-CORREO:dgiuliani@gmail.com
+PROYECTO FINAL: TOUR MUSICAL - DIEGO GIULIANI (dni: 43687264)
 
-NOMBRE DE USUARIO:ddd
-CONTRASE;A:123
-CORREO:ddd@gmail.com
+Instrucciones de uso:
+
+Inicie el programa desde la pantalla de inicio ubicada en la sección "Entidades".
+Inicie sesión con uno de los usuarios precargados para acceder a la pantalla principal.
+Pantalla Principal:
+
+Aquí encontrará tres botones principales:
+
+Eventos: Explore nuestra lista de emocionantes eventos con sus características detalladas. ¡Incluso puede dejar su propia reseña!
+
+Mapa: Visualice las ubicaciones de los eventos en un mapa interactivo. Lamentablemente, he enfrentado algunos problemas técnicos con esta función que estoy tratando de resolver. A pesar de ello, el resto del programa sigue siendo completamente funcional.
+
+Reseñas: Explore las reseñas de los eventos.
+
+Errores Conocidos:
+
+El mapa no se muestra correctamente debido a problemas técnicos que estoy investigando para resolver.
+Al iniciar el programa desde "Pantalla_Inicio", se abre automáticamente "Pantalla_Principal". Esto puede cerrarse para acceder a la pantalla de inicio y luego iniciar sesión para utilizar todas las características del programa.
+
+Usuarios Precargados:
+Usuario 1:
+
+Nombre de Usuario: dgiuliani
+Contraseña: 123
+Correo: dgiuliani@gmail.com
+Usuario 2:
+
+Nombre de Usuario: ddd
+Contraseña: 123
+Correo: ddd@gmail.com
