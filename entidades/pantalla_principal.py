@@ -1,30 +1,27 @@
 import tkinter as tk
 import json
-from entidades.evento import Evento
-from entidades.ubicacion import Ubicacion
-from entidades.review import Review
-from PIL import Image, ImageTk
+from evento import Evento
+from ubicacion import Ubicacion
+from review import Review
 import tkintermapview
 
 def cargar_eventos_desde_json():
-    ruta_archivo = "data/eventos.json"  # Ruta relativa al archivo desde pantalla_principal.py
-    eventos = []
-    with open(ruta_archivo, "r") as archivo:
-        data = json.load(archivo)
-        for evento_data in data:
-            evento = Evento.from_json(evento_data)
-            eventos.append(evento)
+    with open('data/eventos.json', 'r') as archivo:
+        eventos_data = json.load(archivo)
+    eventos = [Evento(**evento) for evento in eventos_data]
     return eventos
 
 def cargar_ubicaciones_desde_json():
-    ruta_archivo = "data/ubicaciones.json"  # Ruta relativa al archivo desde pantalla_principal.py
-    ubicaciones = []
-    with open(ruta_archivo, "r") as archivo:
-        data = json.load(archivo)
-        for ubicacion_data in data:
-            ubicacion = Ubicacion.from_json(ubicacion_data)
-            ubicaciones.append(ubicacion)
+    with open('data/ubicaciones.json', 'r') as archivo:
+        ubicaciones_data = json.load(archivo)
+    ubicaciones = [Ubicacion(**ubicacion) for ubicacion in ubicaciones_data]
     return ubicaciones
+
+def cargar_reviews_desde_json():
+    with open('data/reviews.json', 'r') as archivo:
+        reviews_data = json.load(archivo)
+    reviews = [Review(**review) for review in reviews_data]
+    return reviews
 
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
@@ -62,18 +59,11 @@ def mostrar_pantalla_principal():
 
             btn_guardar = tk.Button(ventana_review, text="Guardar Review", command=lambda: guardar_nueva_review(evento, entry_calificacion.get(), entry_comentario.get(), entry_animo.get()))
             btn_guardar.pack()
-
+            
+        
         for evento in eventos:
-            imagen = Image.open(evento.imagen)
-            imagen = imagen.resize((150, 150), Image.ANTIALIAS)
-            imagen = ImageTk.PhotoImage(imagen)
-
             label_evento = tk.Label(ventana_eventos, text=evento.nombre, font=("Arial", 12, "bold"), bg="#E5E5E5", fg="#2F242C")
             label_evento.pack()
-
-            label_imagen = tk.Label(ventana_eventos, image=imagen, bg="#E5E5E5")
-            label_imagen.image = imagen
-            label_imagen.pack()
 
             label_descripcion = tk.Label(ventana_eventos, text=evento.descripcion, font=("Arial", 10), bg="#E5E5E5", fg="#2F242C")
             label_descripcion.pack()
@@ -163,4 +153,3 @@ def mostrar_pantalla_principal():
     ventana_principal.mainloop()
 
 mostrar_pantalla_principal()
-
