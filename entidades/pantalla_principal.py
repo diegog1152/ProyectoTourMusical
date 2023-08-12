@@ -24,6 +24,14 @@ def cargar_reviews_desde_json():
     reviews = [Review(**review) for review in reviews_data]
     return reviews
 
+def guardar_review(review):
+    reviews = cargar_reviews_desde_json()
+    reviews.append(review)
+
+    reviews_data = [{"id_evento": r.id_evento, "calificacion": r.calificacion, "comentario": r.comentario, "animo": r.animo} for r in reviews]
+    with open('data/reviews.json', 'w') as archivo:
+        json.dump(reviews_data, archivo, indent=4)
+
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
     ventana_principal.title("Tour Musical")
