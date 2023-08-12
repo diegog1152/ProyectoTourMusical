@@ -26,12 +26,12 @@ def cargar_reviews_desde_json():
 def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
     ventana_principal.title("Tour Musical")
-    ventana_principal.geometry("800x600")
+    ventana_principal.geometry("960x720")
 
     def mostrar_eventos():
         ventana_eventos = tk.Toplevel()
         ventana_eventos.title("Eventos Disponibles")
-        ventana_eventos.geometry("400x500")
+        ventana_eventos.geometry("800x600")
         eventos = cargar_eventos_desde_json()
 
         def mostrar_escribir_review(evento):
@@ -127,7 +127,7 @@ def mostrar_pantalla_principal():
     def mostrar_reviews():
         ventana_reviews = tk.Toplevel()
         ventana_reviews.title("Reviews de Eventos")
-        ventana_reviews.geometry("400x500")
+        ventana_reviews.geometry("800x600")
 
         reviews = cargar_reviews_desde_json()
 
@@ -150,14 +150,14 @@ def mostrar_pantalla_principal():
         # Opcional: Recargar la sección de reviews para mostrar la nueva review inmediatamente
         mostrar_reviews()
 
-    btn_eventos = tk.Button(ventana_principal, text="Eventos", command=mostrar_eventos)
-    btn_eventos.pack()
+    btn_eventos = tk.Button(ventana_principal, text="Eventos", font=("Arial", 14), width=15, command=mostrar_eventos)
+    btn_eventos.pack(side=tk.LEFT, padx=10, pady=10)
 
-    btn_mapa = tk.Button(ventana_principal, text="Mapa", command=mostrar_mapa)
-    btn_mapa.pack()
+    btn_mapa = tk.Button(ventana_principal, text="Mapa", font=("Arial", 14), width=15, command=mostrar_mapa)
+    btn_mapa.pack(side=tk.LEFT, padx=10, pady=10)
 
-    btn_reviews = tk.Button(ventana_principal, text="Reviews", command=mostrar_reviews)
-    btn_reviews.pack()
+    btn_reviews = tk.Button(ventana_principal, text="Reviews", font=("Arial", 14), width=15, command=mostrar_reviews)
+    btn_reviews.pack(side=tk.LEFT, padx=10, pady=10)
 
     ventana_principal.mainloop()
 
