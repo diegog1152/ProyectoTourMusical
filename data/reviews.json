@@ -2,24 +2,24 @@
     {
         "id_evento": 1,
         "calificacion": 4,
-        "comentario": "Buen evento, disfrut\u00c3\u00a9 mucho.",
+        "comentario": "Buen evento, disfrute mucho.",
         "animo": "Contento"
     },
     {
         "id_evento": 1,
         "calificacion": 5,
-        "comentario": "Incre\u00c3\u00adble experiencia, definitivamente volver\u00c3\u00a9.",
+        "comentario": "Increible experiencia, definitivamente volvere a proximos shows.",
         "animo": "Emocionado"
     },
     {
         "id_evento": 1,
         "calificacion": 3,
-        "comentario": "Estuvo bien, pero podr\u00c3\u00ada mejorar en algunos aspectos.",
+        "comentario": "Estuvo bien, pero podria mejorar en algunos aspectos.",
         "animo": "Neutral"
     },
     {
         "id_evento": 1,
-        "calificacion": "3",
+        "calificacion": "2",
         "comentario": "podria mejorar",
         "animo": "aburrido"
     }
