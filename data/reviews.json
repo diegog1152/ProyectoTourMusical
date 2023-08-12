@@ -22,5 +22,11 @@
         "calificacion": "2",
         "comentario": "podria mejorar",
         "animo": "aburrido"
+    },
+    {
+        "id_evento": 1,
+        "calificacion": "3",
+        "comentario": "Entretenido pero de poca duracion",
+        "animo": "Neutral"
     }
 ]
