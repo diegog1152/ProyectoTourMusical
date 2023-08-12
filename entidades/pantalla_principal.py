@@ -3,7 +3,8 @@ import json
 from evento import Evento
 from ubicacion import Ubicacion
 from review import Review
-import tkintermapview
+from tkintermapview import map_widget
+from PIL import Image, ImageTk
 
 def cargar_eventos_desde_json():
     with open('data/eventos.json', 'r') as archivo:
@@ -116,7 +117,7 @@ def mostrar_pantalla_principal():
         eventos = cargar_eventos_desde_json()
         ubicaciones = cargar_ubicaciones_desde_json()
 
-        map_view = tkintermapview(ventana_mapa, zoom=12)
+        map_view = TkinterMapview(ventana_mapa, zoom=12)  # Usa la clase correcta
         map_view.pack(fill=tk.BOTH, expand=True)
 
         for ubicacion in ubicaciones:
