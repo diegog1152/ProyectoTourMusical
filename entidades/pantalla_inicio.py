@@ -16,14 +16,14 @@ def mostrar_pantalla_inicio():
         contrasena = entry_contrasena.get()
 
         for usuario in usuarios:
-          if usuario.nombre_usuario == nombre_usuario and usuario.contrasena == contrasena:
-            messagebox.showinfo("Inicio de Sesión", f"Bienvenido, {usuario.nombre_usuario}!")
-            ventana_inicio.destroy()
+            if usuario.nombre_usuario == nombre_usuario and usuario.contrasena == contrasena:
+                messagebox.showinfo("Inicio de Sesión", f"Bienvenido, {usuario.nombre_usuario}!")
+                ventana_inicio.destroy()
 
-            # Abre la pantalla principal después de iniciar sesión
-            pantalla_principal.mostrar_pantalla_principal()
+                # Abre la pantalla principal después de iniciar sesión
+                pantalla_principal.mostrar_pantalla_principal()
 
-            return
+                return
 
         messagebox.showerror("Error de Inicio de Sesión", "Nombre de usuario o contraseña incorrectos.")
 
