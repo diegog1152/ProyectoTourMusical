@@ -63,7 +63,3 @@ def mostrar_pantalla_inicio():
 
     btn_iniciar_sesion = tk.Button(ventana_inicio, text="Iniciar Sesión", command=iniciar_sesion)
     btn_iniciar_sesion.pack(pady=10)
-
-    ventana_inicio.mainloop()
-
-mostrar_pantalla_inicio()
