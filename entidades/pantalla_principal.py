@@ -5,6 +5,7 @@ from ubicacion import Ubicacion
 from review import Review
 from tkintermapview import map_widget
 from PIL import Image, ImageTk
+from mapas import Mapa
 
 def cargar_eventos_desde_json():
     with open('data/eventos.json', 'r') as archivo:
@@ -112,20 +113,12 @@ def mostrar_pantalla_principal():
         label_descripcion.pack()
 
     def mostrar_mapa():
-        ventana_mapa = tk.Toplevel()
-        ventana_mapa.title("Mapa de Eventos")
-        ventana_mapa.geometry("800x600")
+        ruta_imagen_mapa = 'views/Mapa.jpg'  # Reemplaza con la ruta de tu imagen del mapa
+        mapa = Mapa(ruta_imagen_mapa)
+        mapa.mostrar()
 
-        eventos = cargar_eventos_desde_json()
-        ubicaciones = cargar_ubicaciones_desde_json()
-
-        map_view = TkinterMapview(ventana_mapa, zoom=12)
-        map_view.pack(fill=tk.BOTH, expand=True)
-
-        for ubicacion in ubicaciones:
-            for evento in eventos:
-                if evento.id_ubicacion == ubicacion.id:
-                    map_view.add_marker(ubicacion.coordenadas[0], ubicacion.coordenadas[1], evento.nombre)
+        btn_mapa = tk.Button(ventana_principal, text="Mostrar Mapa", font=("Arial", 14), width=15, command=mostrar_mapa)
+        btn_mapa.pack(padx=10, pady=10)
 
     def mostrar_reviews():
         ventana_reviews = tk.Toplevel()
