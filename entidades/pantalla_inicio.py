@@ -8,7 +8,7 @@ def mostrar_pantalla_inicio():
     ventana_inicio = tk.Tk()
     ventana_inicio.title("Tour Musical - Inicio")
     ventana_inicio.geometry("400x300")
-
+    
     def iniciar_sesion():
         usuarios = Usuario.cargar_desde_json("data/usuarios.json")
 

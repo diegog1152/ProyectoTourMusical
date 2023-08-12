@@ -36,7 +36,7 @@ def mostrar_pantalla_principal():
     ventana_principal = tk.Tk()
     ventana_principal.title("Tour Musical")
     ventana_principal.geometry("960x720")
-
+    
     def mostrar_eventos():
         ventana_eventos = tk.Toplevel()
         ventana_eventos.title("Eventos Disponibles")
@@ -80,12 +80,6 @@ def mostrar_pantalla_principal():
             label_artista = tk.Label(ventana_eventos, text=f"Artista: {evento.artista}", font=("Arial", 10), bg="#E5E5E5", fg="#2F242C")
             label_artista.pack()
 
-            label_genero = tk.Label(ventana_eventos, text=f"Género: {evento.genero}", font=("Arial", 10), bg="#E5E5E5", fg="#2F242C")
-            label_genero.pack()
-
-            label_hora_inicio = tk.Label(ventana_eventos, text=f"Hora de inicio: {evento.hora_inicio}", font=("Arial", 10), bg="#E5E5E5", fg="#2F242C")
-            label_hora_inicio.pack()
-
             btn_ver_mas = tk.Button(ventana_eventos, text="Ver más", command=lambda e=evento: mostrar_info_evento(e))
             btn_ver_mas.pack()
 
@@ -125,7 +119,7 @@ def mostrar_pantalla_principal():
         eventos = cargar_eventos_desde_json()
         ubicaciones = cargar_ubicaciones_desde_json()
 
-        map_view = TkinterMapview(ventana_mapa, zoom=12)  # Usa la clase correcta
+        map_view = TkinterMapview(ventana_mapa, zoom=12)
         map_view.pack(fill=tk.BOTH, expand=True)
 
         for ubicacion in ubicaciones:
