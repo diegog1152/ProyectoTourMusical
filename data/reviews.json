@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id_evento": 1,
+        "calificacion": 4,
+        "comentario": "Buen evento, disfruté mucho.",
+        "animo": "Contento"
+    },
+    {
+        "id_evento": 1,
+        "calificacion": 5,
+        "comentario": "Increíble experiencia, definitivamente volveré.",
+        "animo": "Emocionado"
+    },
+    {
+        "id_evento": 1,
+        "calificacion": 3,
+        "comentario": "Estuvo bien, pero podría mejorar en algunos aspectos.",
+        "animo": "Neutral"
+    }
+]

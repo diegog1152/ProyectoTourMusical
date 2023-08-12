@@ -116,7 +116,7 @@ def mostrar_pantalla_principal():
         eventos = cargar_eventos_desde_json()
         ubicaciones = cargar_ubicaciones_desde_json()
 
-        map_view = TkinterMapView(ventana_mapa, zoom=12)
+        map_view = tkintermapview(ventana_mapa, zoom=12)
         map_view.pack(fill=tk.BOTH, expand=True)
 
         for ubicacion in ubicaciones:

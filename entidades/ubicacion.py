@@ -1,3 +1,4 @@
+import json
 class Coordenadas:
     def __init__(self, latitud, longitud):
         self.latitud = latitud
